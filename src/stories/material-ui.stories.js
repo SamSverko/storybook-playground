@@ -10,19 +10,19 @@ import Select from "@material-ui/core/Select";
 import NativeSelect from "@material-ui/core/NativeSelect";
 import { makeStyles } from "@material-ui/core/styles";
 
-import ThemeKnob from "./ThemeKnob";
+import ThemeKnob from "../knobs/theme";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   formControl: {
     margin: theme.spacing(1),
-    minWidth: 120
+    minWidth: 120,
   },
   selectEmpty: {
-    marginTop: theme.spacing(2)
+    marginTop: theme.spacing(2),
   },
   button: {
-    margin: theme.spacing(2)
-  }
+    margin: theme.spacing(2),
+  },
 }));
 
 export const BasicControls = () => {
@@ -30,7 +30,7 @@ export const BasicControls = () => {
   const classes = useStyles();
   const [state, setState] = React.useState({
     age: "",
-    name: "hai"
+    name: "hai",
   });
 
   const inputLabel = React.useRef(null);
@@ -39,14 +39,14 @@ export const BasicControls = () => {
     setLabelWidth(inputLabel.current.offsetWidth);
   }, []);
 
-  const handleChangeInput = name => event => {
+  const handleChangeInput = (name) => (event) => {
     setState({
       ...state,
-      [name]: event.target.value
+      [name]: event.target.value,
     });
   };
 
-  const handleChange = event => {
+  const handleChange = (event) => {
     setChecked(event.target.checked);
   };
 
@@ -54,10 +54,7 @@ export const BasicControls = () => {
     <ThemeKnob>
       <div>
         <div>
-          <Button
-            variant="contained"
-            className={classes.button}
-          >
+          <Button variant="contained" className={classes.button}>
             Default
           </Button>
           <Button
@@ -74,11 +71,7 @@ export const BasicControls = () => {
           >
             Secondary
           </Button>
-          <Button
-            variant="contained"
-            disabled
-            className={classes.button}
-          >
+          <Button variant="contained" disabled className={classes.button}>
             Disabled
           </Button>
           <Button
@@ -96,7 +89,7 @@ export const BasicControls = () => {
             onChange={handleChange}
             value="primary"
             inputProps={{
-              "aria-label": "primary checkbox"
+              "aria-label": "primary checkbox",
             }}
           />
           <Checkbox
@@ -104,20 +97,20 @@ export const BasicControls = () => {
             value="secondary"
             color="primary"
             inputProps={{
-              "aria-label": "secondary checkbox"
+              "aria-label": "secondary checkbox",
             }}
           />
           <Checkbox
             value="uncontrolled"
             inputProps={{
-              "aria-label": "uncontrolled-checkbox"
+              "aria-label": "uncontrolled-checkbox",
             }}
           />
           <Checkbox
             disabled
             value="disabled"
             inputProps={{
-              "aria-label": "disabled checkbox"
+              "aria-label": "disabled checkbox",
             }}
           />
           <Checkbox
@@ -125,7 +118,7 @@ export const BasicControls = () => {
             checked
             value="disabled checked"
             inputProps={{
-              "aria-label": "disabled checked checkbox"
+              "aria-label": "disabled checked checkbox",
             }}
           />
           <Checkbox
@@ -133,7 +126,7 @@ export const BasicControls = () => {
             value="indeterminate"
             indeterminate
             inputProps={{
-              "aria-label": "indeterminate checkbox"
+              "aria-label": "indeterminate checkbox",
             }}
           />
           <Checkbox
@@ -141,7 +134,7 @@ export const BasicControls = () => {
             color="default"
             value="default"
             inputProps={{
-              "aria-label": "checkbox with default color"
+              "aria-label": "checkbox with default color",
             }}
           />
           <Checkbox
@@ -149,22 +142,20 @@ export const BasicControls = () => {
             size="small"
             value="small"
             inputProps={{
-              "aria-label": "checkbox with small size"
+              "aria-label": "checkbox with small size",
             }}
           />
         </div>
         <div>
           <FormControl className={classes.formControl}>
-            <InputLabel htmlFor="age-native-simple">
-              Age
-            </InputLabel>
+            <InputLabel htmlFor="age-native-simple">Age</InputLabel>
             <Select
               native
               value={state.age}
               onChange={handleChangeInput("age")}
               inputProps={{
                 name: "age",
-                id: "age-native-simple"
+                id: "age-native-simple",
               }}
             >
               <option value="" />
@@ -174,15 +165,13 @@ export const BasicControls = () => {
             </Select>
           </FormControl>
           <FormControl className={classes.formControl}>
-            <InputLabel htmlFor="age-native-helper">
-              Age
-            </InputLabel>
+            <InputLabel htmlFor="age-native-helper">Age</InputLabel>
             <NativeSelect
               value={state.age}
               onChange={handleChangeInput("age")}
               inputProps={{
                 name: "age",
-                id: "age-native-helper"
+                id: "age-native-helper",
               }}
             >
               <option value="" />
@@ -190,9 +179,7 @@ export const BasicControls = () => {
               <option value={20}>Twenty</option>
               <option value={30}>Thirty</option>
             </NativeSelect>
-            <FormHelperText>
-              Some important helper text
-            </FormHelperText>
+            <FormHelperText>Some important helper text</FormHelperText>
           </FormControl>
           <FormControl className={classes.formControl}>
             <NativeSelect
@@ -207,15 +194,10 @@ export const BasicControls = () => {
               <option value={20}>Twenty</option>
               <option value={30}>Thirty</option>
             </NativeSelect>
-            <FormHelperText>
-              With visually hidden label
-            </FormHelperText>
+            <FormHelperText>With visually hidden label</FormHelperText>
           </FormControl>
           <FormControl className={classes.formControl}>
-            <InputLabel
-              shrink
-              htmlFor="age-native-label-placeholder"
-            >
+            <InputLabel shrink htmlFor="age-native-label-placeholder">
               Age
             </InputLabel>
             <NativeSelect
@@ -223,7 +205,7 @@ export const BasicControls = () => {
               onChange={handleChangeInput("age")}
               inputProps={{
                 name: "age",
-                id: "age-native-label-placeholder"
+                id: "age-native-label-placeholder",
               }}
             >
               <option value="">None</option>
@@ -231,23 +213,16 @@ export const BasicControls = () => {
               <option value={20}>Twenty</option>
               <option value={30}>Thirty</option>
             </NativeSelect>
-            <FormHelperText>
-              Label + placeholder
-            </FormHelperText>
+            <FormHelperText>Label + placeholder</FormHelperText>
           </FormControl>
-          <FormControl
-            className={classes.formControl}
-            disabled
-          >
-            <InputLabel htmlFor="name-native-disabled">
-              Name
-            </InputLabel>
+          <FormControl className={classes.formControl} disabled>
+            <InputLabel htmlFor="name-native-disabled">Name</InputLabel>
             <NativeSelect
               value={state.name}
               onChange={handleChangeInput("name")}
               inputProps={{
                 name: "name",
-                id: "name-native-disabled"
+                id: "name-native-disabled",
               }}
             >
               <option value="" />
@@ -261,19 +236,14 @@ export const BasicControls = () => {
             </NativeSelect>
             <FormHelperText>Disabled</FormHelperText>
           </FormControl>
-          <FormControl
-            className={classes.formControl}
-            error
-          >
-            <InputLabel htmlFor="name-native-error">
-              Name
-            </InputLabel>
+          <FormControl className={classes.formControl} error>
+            <InputLabel htmlFor="name-native-error">Name</InputLabel>
             <NativeSelect
               value={state.name}
               onChange={handleChangeInput("name")}
               name="name"
               inputProps={{
-                id: "name-native-error"
+                id: "name-native-error",
               }}
             >
               <option value="" />
@@ -288,14 +258,12 @@ export const BasicControls = () => {
             <FormHelperText>Error</FormHelperText>
           </FormControl>
           <FormControl className={classes.formControl}>
-            <InputLabel htmlFor="uncontrolled-native">
-              Name
-            </InputLabel>
+            <InputLabel htmlFor="uncontrolled-native">Name</InputLabel>
             <NativeSelect
               defaultValue={30}
               inputProps={{
                 name: "name",
-                id: "uncontrolled-native"
+                id: "uncontrolled-native",
               }}
             >
               <option value="" />
@@ -322,20 +290,15 @@ export const BasicControls = () => {
             </NativeSelect>
             <FormHelperText>Placeholder</FormHelperText>
           </FormControl>
-          <FormControl
-            required
-            className={classes.formControl}
-          >
-            <InputLabel htmlFor="age-native-required">
-              Age
-            </InputLabel>
+          <FormControl required className={classes.formControl}>
+            <InputLabel htmlFor="age-native-required">Age</InputLabel>
             <Select
               native
               value={state.age}
               onChange={handleChangeInput("age")}
               name="age"
               inputProps={{
-                id: "age-native-required"
+                id: "age-native-required",
               }}
             >
               <option value="" />
@@ -345,14 +308,8 @@ export const BasicControls = () => {
             </Select>
             <FormHelperText>Required</FormHelperText>
           </FormControl>
-          <FormControl
-            variant="outlined"
-            className={classes.formControl}
-          >
-            <InputLabel
-              ref={inputLabel}
-              htmlFor="outlined-age-native-simple"
-            >
+          <FormControl variant="outlined" className={classes.formControl}>
+            <InputLabel ref={inputLabel} htmlFor="outlined-age-native-simple">
               Age
             </InputLabel>
             <Select
@@ -362,7 +319,7 @@ export const BasicControls = () => {
               labelWidth={labelWidth}
               inputProps={{
                 name: "age",
-                id: "outlined-age-native-simple"
+                id: "outlined-age-native-simple",
               }}
             >
               <option value="" />
@@ -371,20 +328,15 @@ export const BasicControls = () => {
               <option value={30}>Thirty</option>
             </Select>
           </FormControl>
-          <FormControl
-            variant="filled"
-            className={classes.formControl}
-          >
-            <InputLabel htmlFor="filled-age-native-simple">
-              Age
-            </InputLabel>
+          <FormControl variant="filled" className={classes.formControl}>
+            <InputLabel htmlFor="filled-age-native-simple">Age</InputLabel>
             <Select
               native
               value={state.age}
               onChange={handleChangeInput("age")}
               inputProps={{
                 name: "age",
-                id: "filled-age-native-simple"
+                id: "filled-age-native-simple",
               }}
             >
               <option value="" />
@@ -400,7 +352,7 @@ export const BasicControls = () => {
 };
 
 export default {
-  title: "Material Ui",
+  title: "Material UI",
   component: BasicControls,
-  decorators: [withKnobs]
+  decorators: [withKnobs],
 };
