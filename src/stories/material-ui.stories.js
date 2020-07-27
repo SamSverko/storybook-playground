@@ -352,7 +352,7 @@ export const BasicControls = () => {
 }
 
 export default {
-  title: 'Material UI',
+  title: 'xMaterial UI',
   component: BasicControls,
   decorators: [withKnobs]
 }

@@ -13,8 +13,11 @@ export default {
 
 export const Default = () => (
   <ThemeKnob>
-    <Button color='primary' onClick={action('clicked')} variant='contained'>
-      Hello Button
+    <Button color='primary' onClick={action('onClick')} variant='contained'>
+      Primary
+    </Button>
+    <Button color='secondary' onClick={action('onClick')} variant='contained'>
+      Secondary
     </Button>
   </ThemeKnob>
 )
