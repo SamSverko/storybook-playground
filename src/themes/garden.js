@@ -1,10 +1,10 @@
-import { createMuiTheme } from "@material-ui/core/styles";
+import { createMuiTheme } from '@material-ui/core/styles'
 
-import lightGreen from "@material-ui/core/colors/lightGreen";
-import lime from "@material-ui/core/colors/lime";
-import teal from "@material-ui/core/colors/teal";
-import yellow from "@material-ui/core/colors/yellow";
-import deepOrange from "@material-ui/core/colors/deepOrange";
+import lightGreen from '@material-ui/core/colors/lightGreen'
+import lime from '@material-ui/core/colors/lime'
+import teal from '@material-ui/core/colors/teal'
+import yellow from '@material-ui/core/colors/yellow'
+import deepOrange from '@material-ui/core/colors/deepOrange'
 
 export default createMuiTheme({
   palette: {
@@ -21,6 +21,6 @@ export default createMuiTheme({
     }
   },
   status: {
-    danger: "orange"
+    danger: 'orange'
   }
-});
+})
