@@ -1,25 +1,45 @@
 import { createMuiTheme } from '@material-ui/core/styles'
-import HUE from './locus.hue'
 
 export default createMuiTheme({
   palette: {
-    error: {
-      contrastText: HUE.grey[0],
-      dark: HUE.red[900],
-      light: HUE.red[500],
-      main: HUE.red[700]
-    },
     primary: {
-      contrastText: HUE.grey[0],
-      dark: HUE.blue[900],
-      light: HUE.blue[500],
-      main: HUE.blue[700]
+      light: '#6aa3ff',
+      main: '#0075ff',
+      dark: '#004bcb',
+      contrastText: '#ffffff'
     },
     secondary: {
-      contrastText: HUE.grey[0],
-      dark: HUE.grey[900],
-      light: HUE.grey[500],
-      main: HUE.grey[700]
+      light: '#8e8e8e',
+      main: '#616161',
+      dark: '#373737',
+      contrastText: '#ffffff'
+    },
+    error: {
+      light: '#ff5533',
+      main: '#ea0000',
+      dark: '#af0000',
+      contrastText: '#ffffff'
+    },
+    warning: {
+      light: '#ffe24b',
+      main: '#f4b000',
+      dark: '#bc8100',
+      contrastText: '#000000'
+    },
+    info: {
+      light: '#ae57ff',
+      main: '#741fff',
+      dark: '#2e00ca',
+      contrastText: '#ffffff'
+    },
+    success: {
+      light: '#64ff4f',
+      main: '#00d308',
+      dark: '#00a000',
+      contrastText: '#000000'
     }
+  },
+  typography: {
+    fontFamily: "'Open Sans', sans-serif"
   }
 })
