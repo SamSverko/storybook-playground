@@ -1,18 +1,14 @@
 import React from 'react'
 import { action } from '@storybook/addon-actions'
-import { withKnobs } from '@storybook/addon-knobs'
 import Chip from '@material-ui/core/Chip'
-
-import ThemeKnob from '../knobs/theme'
 
 export default {
   title: 'Chip',
-  component: Chip,
-  decorators: [withKnobs]
+  component: Chip
 }
 
 export const Default = () => (
-  <ThemeKnob>
+  <div>
     <Chip
       clickable
       color='primary'
@@ -27,5 +23,5 @@ export const Default = () => (
       onClick={action('onClick')}
       onDelete={action('onDelete')}
     />
-  </ThemeKnob>
+  </div>
 )
