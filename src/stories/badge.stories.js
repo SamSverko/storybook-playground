@@ -11,10 +11,9 @@ export default {
 export const Default = () => (
   <div>
     <BadgeComponent
-      badgeContent={0}
+      badgeContent={3}
       color='primary'
       onClick={action('onClick')}
-      showZero={true}
     >
       <MailIcon />
     </BadgeComponent>

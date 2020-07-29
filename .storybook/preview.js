@@ -3,7 +3,7 @@ import { addDecorator } from '@storybook/react'
 import { select, withKnobs } from '@storybook/addon-knobs'
 import { ThemeProvider, useTheme } from '@material-ui/core/styles'
 
-import Locus from '../src/themes/locus'
+import Locus from '../src/themes/locus/index'
 import RetroWave from '../src/themes/retro-wave'
 import Garden from '../src/themes/garden'
 

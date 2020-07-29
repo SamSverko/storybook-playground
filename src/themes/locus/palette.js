@@ -1,7 +1,4 @@
-import { createMuiTheme } from '@material-ui/core/styles'
-
-export default createMuiTheme({
-  palette: {
+const palette = {
     primary: {
       light: '#6aa3ff',
       main: '#0075ff',
@@ -38,8 +35,6 @@ export default createMuiTheme({
       dark: '#00a000',
       contrastText: '#000000'
     }
-  },
-  typography: {
-    fontFamily: "'Open Sans', sans-serif"
   }
-})
+
+  export default palette
