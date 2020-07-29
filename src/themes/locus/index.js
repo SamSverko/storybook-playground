@@ -4,6 +4,7 @@ import shadows from './shadows'
 import typography from './typography'
 
 const theme = createMuiTheme({
+  name: 'Locus',
   palette,
   shadows,
   typography

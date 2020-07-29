@@ -7,8 +7,9 @@ export default {
   component: Chip
 }
 
-export const Default = (storyFn) => {
-  console.log(storyFn.palette.primary.main)
+export const Default = (theme) => {
+  console.log(theme.name)
+  console.log(theme.palette.primary.main)
 
   return (
     <div>

@@ -7,6 +7,7 @@ import yellow from '@material-ui/core/colors/yellow'
 import deepOrange from '@material-ui/core/colors/deepOrange'
 
 export default createMuiTheme({
+  name: 'Garden',
   palette: {
     primary: lime,
     secondary: teal,

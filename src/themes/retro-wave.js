@@ -8,6 +8,7 @@ import amber from '@material-ui/core/colors/amber'
 import deepOrange from '@material-ui/core/colors/deepOrange'
 
 export default createMuiTheme({
+  name: 'Retro Wave',
   palette: {
     primary: yellow,
     secondary: purple,
