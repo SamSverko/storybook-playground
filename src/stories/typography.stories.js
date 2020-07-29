@@ -8,7 +8,7 @@ export default {
 
 export const Default = () => (
   <div>
-    <Typography variant='h1' component='h2'>
+    <Typography variant='h1'>
       h1. Heading
     </Typography>
     <Typography variant='h2'>h2. Heading</Typography>
