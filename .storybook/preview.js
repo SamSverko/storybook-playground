@@ -1,7 +1,6 @@
 import React from 'react'
 import { addDecorator } from '@storybook/react'
 import { select, withKnobs } from '@storybook/addon-knobs'
-import CssBaseline from '@material-ui/core/CssBaseline'
 import { ThemeProvider, useTheme } from '@material-ui/core/styles'
 
 import Locus from '../src/themes/locus/index'
@@ -21,8 +20,7 @@ const globalTheme = (storyFn) => {
 
   return (
     <ThemeProvider theme={themes[theme]}>
-      <CssBaseline />
-      {storyFn()}
+      {storyFn(themes[theme])}
     </ThemeProvider>
   )
 }

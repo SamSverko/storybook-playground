@@ -7,21 +7,25 @@ export default {
   component: Chip
 }
 
-export const Default = () => (
-  <div>
-    <Chip
-      clickable
-      color='primary'
-      label='Primary clickable'
-      onClick={action('onClick')}
-      onDelete={action('onDelete')}
-    />
-    <Chip
-      clickable
-      color='secondary'
-      label='Secondary clicable'
-      onClick={action('onClick')}
-      onDelete={action('onDelete')}
-    />
-  </div>
-)
+export const Default = (storyFn) => {
+  console.log(storyFn.palette.primary.main)
+
+  return (
+    <div>
+      <Chip
+        clickable
+        color='primary'
+        label='Primary clickable'
+        onClick={action('onClick')}
+        onDelete={action('onDelete')}
+      />
+      <Chip
+        clickable
+        color='secondary'
+        label='Secondary clicable'
+        onClick={action('onClick')}
+        onDelete={action('onDelete')}
+      />
+    </div>
+  )
+}
